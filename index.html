@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Swipe触摸轮播广告</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/swipe.css">
+<script src="js/swipe.js"></script>
+
+<body>
+<div class="addWrap">
+
+	<div class="swipe" id="mySwipe">
+        <div class="swipe-wrap">
+            <div><a href="javascript:;"><img src="images/pichaoad01.jpg" width="300" height="150" alt="" /></a></div>
+            <div><a href="javascript:;"><img src="images/pichaoad02.jpg" width="300" height="150" alt="" /></a></div>
+            <div><a href="javascript:;"><img src="images/pichaoad03.jpg" width="300" height="150" alt="" /></a></div>
+        </div>
+    </div>
+    <ul id="position">
+      <li class="cur"></li>
+      <li class=""></li>
+      <li class=""></li>
+    </ul>
+</div>
+<script type="text/javascript">
+var bullets = document.getElementById('position').getElementsByTagName('li');
+var banner = Swipe(document.getElementById('mySwipe'), {
+	auto: 2000,
+	continuous: true,
+	disableScroll:false,
+	callback: function(pos) {
+		var i = bullets.length;
+		while (i--) {
+		  bullets[i].className = ' ';
+		}
+		bullets[pos].className = 'cur';
+	}
+});
+</script>
+</body>
+</html>

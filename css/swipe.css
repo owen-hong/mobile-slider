@@ -1,0 +1,10 @@
+.addWrap{width:300px;background:#fff;margin:auto;position:relative;}
+.addWrap .swipe{height:150px;overflow: hidden;visibility: hidden;position:relative;}
+.addWrap .swipe-wrap{overflow:hidden;position:relative;}
+.addWrap .swipe-wrap > div {float: left;width: 100%;position:relative;}
+
+#position{padding:0;text-align:center;}
+#position li{width:10px;height:10px;margin:0 3px;display:inline-block;-webkit-border-radius:5px;border-radius:5px;background-color:#AFAFAF;}
+#position li.cur{background-color:#FF0000;}
+
+
